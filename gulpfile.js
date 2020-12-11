@@ -27,9 +27,10 @@ function scripts() {
 
 function styles() {
   return src([
-    'app/css/reset.css',
-    'app/css/slick.css',
-    'app/scss/style.scss',
+    'node_modules/normalize.css/normalize.css',
+    'app/css/**/*.css',
+    '!app/css/style.min.css',
+    'app/scss/**/*.scss',
   ])
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(concat('style.min.css'))

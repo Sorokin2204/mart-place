@@ -1,345 +1,324 @@
-* {
-  box-sizing: border-box;
-}
+@import 'vars';
+@import 'global';
 
-body {
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-}
-
+// !HEADER
 .header {
-  &__inner {
-    color: #fefefe;
+  &__top {
+    background-color: #eef1f3;
+  }
+
+  &__top-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 25px 0px;
   }
 
   &__logo {
-    padding: 22px 0px;
+  }
+
+  &__button {
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+  }
+
+  &__icons {
+    margin: 0 50px;
+  }
+
+  &__icons &__link-icon &__icon {
+    color: #7e8fa1;
+    font-size: 20px;
+    margin-right: 30px;
+  }
+
+  &__notif-icon {
+  }
+
+  &__message-icon {
+  }
+
+  &__basket-icon {
+  }
+
+  &__account {
+  }
+
+  &__bottom {
+  }
+
+  &__bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__menu {
+    padding: 35px 0px;
   }
 
-  &__list {
-    cursor: default;
+  &__search {
+  }
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  &__img {
+    background-color: #7c7979;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-right: 22px;
   }
 
-  &__list-item {
-    display: inline-block;
-    margin-left: 28px;
+  &__info {
+    line-height: 22px;
   }
 
-  &__list-link {
-    font-family: 'Bebas Neue', sans-serif;
+  &__name {
+    color: #333;
     font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    text-transform: uppercase;
-    line-height: normal;
-    color: #b9b9b9;
-    transition: all 1s;
+    font-weight: 600;
+  }
 
-    &:hover {
-      color: #e8663c;
-    }
+  &__balance {
+    color: $blue;
   }
 }
 
-.slider {
-  &__inner {
-  }
-
-  &__item {
-    min-height: 400px;
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-
-  &__box {
-    padding: 20px 30px 20px 18px;
-    max-width: 415px;
-
-    background-color: #e8663c;
-    opacity: 0.8;
-    position: absolute;
-    bottom: 36px;
-    left: 35px;
-  }
-
-  &__item-title {
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-family: 'Bebas Neue';
-    font-size: 18px;
-    font-weight: 100;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 1;
-    text-align: left;
-  }
-
-  &__item-text {
-    color: #ffffff;
-    font-family: 'HelveticaNeueCyr';
-    font-size: 12px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
-    text-align: left;
-  }
-
-  &__nav {
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-between;
-    margin-top: 17px;
-  }
-
-  &__nav .slick-track {
-    transform: translate3d(0px, 0px, 0px) !important;
-  }
-
-  &__nav .slick-slide {
-    max-width: 140px;
-  }
-
-  &__nav .slick-track div + div {
-    margin-left: 20px; // transform: translate3d(0px, 0px, 0px) !important;
-  }
-
-  &__nav-item {
-    width: 140;
-    height: 120px;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-  }
-}
-
-.items {
-  padding-top: 43px;
-  padding-bottom: 45px;
-  &__inner {
+.menu {
+  &__list {
     display: flex;
-    justify-content: space-between;
-  }
-}
-
-.item {
-  position: relative;
-  width: 277px;
-
-  &__title {
-    color: #e8663c;
-    font-family: 'Bebas Neue';
-    font-size: 18px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 24px;
-
-    padding-left: 69px;
-
-    height: 40px;
+    align-items: center;
   }
 
-  &__text {
-    color: #414141;
-    font-family: 'HelveticaNeueCyr';
-    font-size: 12px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 18px;
-    text-align: left;
-    margin: 38px 0px 20px;
+  &__item + &__item {
+    margin-left: 34px;
   }
 
   &__link {
-    display: inline-block;
-    color: #ffffff;
-    font-family: 'Bebas Neue';
-    font-size: 12px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
 
-    padding: 10px 15px;
-    background-color: #e8663c;
+.search {
+  position: relative;
+  &__form {
   }
 
-  &__icon {
+  &__input {
+    padding: 16px 25px;
+    border: 1px solid #d9dfe5;
+    border-radius: 23px;
+    height: 46px;
+    width: 360px;
+  }
+
+  &__input::placeholder {
+    color: #898f96;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  &__button {
+    border-radius: 23px;
+    padding: 15px 27px;
+    height: 100%;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 0px;
     top: 0px;
-  }
-}
-
-.works {
-  &__header {
-    color: #e8603c;
-    font-family: 'Bebas Neue';
-    font-size: 18px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    margin-bottom: 25px;
+    right: 0px;
   }
 
-  &__header::after {
-    content: url('../img/Line.jpg');
-    background-size: cover;
-    margin-left: 20px;
-  }
-
-  &__title {
-    color: #b9b9b9;
-    font-family: 'Bebas Neue';
+  &__button-icon {
+    color: #fff;
     font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 18px;
-    text-align: left;
-  }
-
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__item {
-    max-width: 245px;
-  }
-
-  &__box {
-    padding: 14px;
-    border-left: 1px solid #dbdbdb;
-    border-right: 1px solid #dbdbdb;
-    border-bottom: 1px solid #dbdbdb;
-  }
-
-  &__img {
-  }
-
-  &__date {
-    /* Style for "June 15, 2" */
-    width: 56px;
-    height: 12px;
-    color: #e8663c;
-    font-family: 'Bebas Neue';
-    font-size: 11px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 18px;
-    text-align: left;
   }
 }
 
-.footer {
+.main {
+  position: relative;
+  min-height: 726px;
+  color: #f3f3f8;
+  background-color: #441c7c;
+  background-image: linear-gradient(to left, #0030de 0%, #2e5afb 100%);
+  opacity: 0.8;
   &__inner {
-    background-color: #e8663c;
-    margin-top: 48px;
-    padding: 38px 35px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__item {
+    padding-top: 184px;
   }
 
   &__title {
-    color: #ffffff;
-    font-family: 'Bebas Neue';
-    font-size: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 60px;
     font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
+    margin-bottom: 38px;
+  }
 
-    text-align: left;
-    margin-bottom: 27px;
+  &__title-bold {
+    font-weight: 700;
   }
 
   &__text {
-    color: #ffffff;
-    font-family: 'HelveticaNeueCyr';
-    font-size: 12px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
-
-    text-align: justify;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 68px;
   }
 
-  &__twitts {
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
   }
 
-  &__twitts-item {
+  &__button-view-all {
+    font-size: 16px;
+    padding: 20px 32px;
+    border-radius: 28px;
+    margin-right: 30px;
   }
 
-  &__twitts-mail {
-    color: #f3b29d;
-    font-family: 'HelveticaNeueCyr';
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
+  &__button-popular-prod {
+    font-size: 16px;
+    padding: 20px 32px;
+    border-radius: 28px;
   }
 
-  &__twitts-text,
-  &__twiits-follow {
-    color: #ffffff;
-    font-family: 'HelveticaNeueCyr';
-    font-size: 12px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 14px;
-    text-align: left;
-    display: inline-block;
-    margin-bottom: 8px;
+  &__search-inner {
+    position: absolute;
+    bottom: -71px;
   }
 
-  &__twitts-time {
-    color: #f3b29d;
-    font-family: 'HelveticaNeueCyr';
-    font-size: 12px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 14px;
-    text-align: left;
-    margin-bottom: 20px;
+  &__search-repeat-1 {
+    position: absolute;
+    width: 100%;
+    max-width: 1080px;
+    height: 135px;
+    bottom: 26px;
+    left: 30px;
+    background-color: #ffffff;
+    opacity: 0.5;
+    border-radius: 6px;
   }
 
-  &__social {
-    margin-top: 20px;
+  &__search-repeat-2 {
+    position: absolute;
+    width: 100%;
+    max-width: 1110px;
+    bottom: 13px;
+    height: 135px;
+    left: 15px;
+    background-color: #ffffff;
+    opacity: 0.5;
+    border-radius: 6px;
   }
 
-  &__social-item {
-    display: inline-block;
+  &__search {
+    height: 135px;
+    position: relative;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    background-color: #ffffff;
   }
 
-  &__social-link {
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__search-box {
+    display: flex;
+  }
+
+  &__search-input {
+    width: 612px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+    border: 1px solid #dcdcdc;
+    padding: 20px 30px;
+  }
+
+  &__search-input::placeholder {
+    color: #676767;
+    font-size: 16px;
+  }
+
+  &__search-combo-box {
+    text-align: center;
+    color: #676767;
+    font-size: 16px;
+    max-width: 194px;
+    width: 100%;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #dcdcdc;
+    border-left: none;
+    padding: 20px;
+  }
+
+  &__search-combo-box::after {
+  }
+
+  &__search-combo-box option {
+    color: #676767;
+    font-size: 16px;
+  }
+
+  &__search-button {
+    margin-left: 30px;
+    padding: 21px 68px;
+    font-size: 16px;
+    border-radius: 4px;
   }
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0px 10px;
+.banner-section {
+  &__inner {
+    display: flex;
+    margin: 185px 0 120px;
+  }
+
+  &__banner {
+  }
+}
+
+.banner {
+  padding: 40px 35px 50px;
+  max-width: 361px;
+  &__img {
+    margin: 0 auto;
+    min-width: 113px;
+    min-height: 112px;
+    background-repeat: no-repeat;
+    display: block;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__title {
+    margin: 35px 0px 30px;
+    font-weight: 500;
+    color: #010101;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+  }
 }

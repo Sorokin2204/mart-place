@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  appearance: none;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-text;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: $color-text;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.button {
+  white-space: nowrap;
+  color: #fff;
+  background-color: $blue;
+  border: none;
+  &--outline {
+    color: $blue;
+    background-color: #ffffff;
+  }
+
+  &--transporent {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #ffffff;
+  }
+}
