@@ -8,9 +8,18 @@ $(function () {
   });
 
   $('.featured__inner').slick({
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
+    prevArrow: $('.featured__arrow-left'),
+    nextArrow: $('.featured__arrow-right'),
   });
 
-  var mixer = mixitup('.product__box');
+  $('.products-slider__box').slick({
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: $('.products-slider__arrow-left'),
+    nextArrow: $('.products-slider__arrow-right'),
+  });
+
+  var mixer = mixitup('.products__box');
 });

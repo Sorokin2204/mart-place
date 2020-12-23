@@ -69,8 +69,36 @@ body {
     font-size: 30px;
     color: #000;
   }
+
+  &__slide-nav {
+    border-radius: 23px;
+    display: inline-block;
+    color: #ffffff;
+
+    display: flex;
+  }
+
+  &__slide-nav-arrow {
+    padding: 15px 25px;
+  }
+
+  &--purple {
+    background-color: #7347c1;
+  }
+
+  &--blue {
+    background-color: $blue;
+  }
 }
 
 .rate-star {
   display: inline-block;
+}
+
+.slick-slide {
+  margin: 0 15px;
+}
+
+.slick-list {
+  margin: 0 -15px;
 }
