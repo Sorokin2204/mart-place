@@ -56,6 +56,21 @@ body {
   }
 }
 
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 40px 30px;
+  font-weight: 400;
+  &__title {
+    font-size: 30px;
+    color: #000;
+  }
+}
+
 .rate-star {
   display: inline-block;
 }

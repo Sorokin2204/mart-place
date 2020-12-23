@@ -16,6 +16,7 @@ function browsersync() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/mixitup/dist/mixitup.js',
     'app/js/slick.min.js',
     'app/js/main.js',
     'app/js/jquery.rateyo.js',

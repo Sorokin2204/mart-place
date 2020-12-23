@@ -11,4 +11,6 @@ $(function () {
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
   });
+
+  var mixer = mixitup('.product__box');
 });
