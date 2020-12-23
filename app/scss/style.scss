@@ -650,3 +650,33 @@
     flex-wrap: wrap;
   }
 }
+
+.statistics {
+  background-color: #212225;
+  padding: 100px 0;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__img {
+    display: block;
+    font-size: 48px;
+    margin-bottom: 48px;
+  }
+
+  &__num {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    color: #ffffff;
+    font-size: 18px;
+  }
+}
