@@ -18,6 +18,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'app/js/slick.min.js',
     'app/js/main.js',
+    'app/js/jquery.rateyo.js',
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -31,6 +32,7 @@ function styles() {
     'app/css/**/*.css',
     '!app/css/style.min.css',
     'app/scss/**/*.scss',
+    'app/css/jquery.rateyo.css',
   ])
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(concat('style.min.css'))

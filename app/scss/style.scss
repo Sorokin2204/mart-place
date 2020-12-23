@@ -1,7 +1,6 @@
 @import 'vars';
 @import 'global';
 
-// !HEADER
 .header {
   &__top {
     background-color: #eef1f3;
@@ -320,5 +319,157 @@
 
   &:hover {
     box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.featured {
+  background-color: #eff1f5;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  &__inner {
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 40px 30px;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-size: 30px;
+    color: #000;
+  }
+
+  &__slide-nav {
+    border-radius: 23px;
+    display: inline-block;
+    color: #ffffff;
+    background-color: #7347c1;
+  }
+  &__slide-nav {
+    display: flex;
+  }
+  &__slide-nav-arrow {
+    padding: 15px 25px;
+  }
+
+  &__product {
+    display: flex;
+    box-shadow: 0 2px 30px rgba(147, 155, 168, 0.1);
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+
+  &__product-img {
+    background-color: #4e5760;
+
+    min-width: 555px;
+    height: 450px;
+  }
+
+  &__product-content {
+    padding: 50px 50px 25px 50px;
+  }
+
+  &__product-title {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  &__product-subtitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 34px;
+  }
+  &__product-user-img {
+    width: 30px;
+    height: 30px;
+    background-color: #7347c1;
+    border-radius: 50%;
+    margin-right: 9px;
+  }
+
+  &__product-user-name {
+    color: #000000;
+    font-weight: 500;
+  }
+
+  &__product-category {
+    display: flex;
+    color: #7347c1;
+  }
+
+  &__product-category:before {
+    content: url(../img/icons/wordpress.svg);
+    margin-right: 9px;
+    margin-left: 21px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__product-text {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  &__product-tags {
+    margin-bottom: 24px;
+    border-bottom: solid 1px #ececec;
+  }
+
+  &__product-tag {
+    margin-top: 40px;
+    margin-bottom: 45px;
+    padding: 7px 14px;
+    color: #868c96;
+    display: inline-block;
+    border-radius: 14px;
+    background-color: #f1f3f6;
+  }
+
+  &__product-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__product-link {
+  }
+
+  &__product-price {
+    padding: 9px 19px;
+    border-radius: 16px;
+    background-color: $blue;
+    font-weight: 500;
+    color: #ffffff;
+  }
+
+  &__product-favorite {
+    & span {
+      color: #7347c1;
+      margin-left: 19px;
+      margin-right: 9px;
+      font-size: 15px;
+    }
+  }
+
+  &__product-buyers {
+    color: $blue;
+    & span {
+      margin-left: 19px;
+      margin-right: 9px;
+      font-size: 15px;
+    }
+  }
+
+  &__product-star {
+    display: inline-block;
   }
 }

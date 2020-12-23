@@ -34,6 +34,12 @@ body {
   padding: 0 15px;
 }
 
+.container-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .button {
   white-space: nowrap;
   color: #fff;
@@ -48,4 +54,8 @@ body {
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #ffffff;
   }
+}
+
+.rate-star {
+  display: inline-block;
 }
