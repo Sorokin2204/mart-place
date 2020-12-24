@@ -37,7 +37,6 @@ body {
 .container-fluid {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 .button {
@@ -46,8 +45,15 @@ body {
   background-color: $blue;
   border: none;
   &--outline {
-    color: $blue;
-    background-color: #ffffff;
+    &-blue {
+      color: $blue;
+      background-color: #ffffff;
+    }
+
+    &-purple {
+      color: $purple;
+      background-color: #ffffff;
+    }
   }
 
   &--transporent {
@@ -101,4 +107,22 @@ body {
 
 .slick-list {
   margin: 0 -15px;
+}
+
+.title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 36px;
+  color: #000000;
+  & span {
+    color: $blue;
+  }
+}
+
+.subtitle {
+  margin: 0 auto;
+  max-width: 672px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
 }
