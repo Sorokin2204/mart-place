@@ -126,3 +126,55 @@ body {
   text-align: center;
   font-size: 16px;
 }
+
+.search {
+  position: relative;
+  &__form {
+  }
+
+  &__input {
+    &--m-s {
+      padding-left: 25px;
+      border: 1px solid #d9dfe5;
+      border-radius: 23px;
+      height: 46px;
+      width: 100%;
+    }
+
+    &--b-s {
+      border: none;
+      border-radius: 25px;
+      height: 50px;
+      width: 100%;
+      padding-left: 30px;
+    }
+
+    &::placeholder {
+      color: #898f96;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+
+  &__button {
+    &--m-s {
+      border-radius: 23px;
+
+      width: 70px;
+      height: 46px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+
+    &--b-s {
+      border-radius: 25px;
+      width: 110px;
+      height: 50px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+  }
+}
