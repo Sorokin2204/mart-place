@@ -28,22 +28,154 @@
 
             <a href="#" class="button header__button">Become a Seller</a>
 
-            <div class="header__icons">
-              <a href="#" class="header__link-icon">
-                <span
-                  class="header__notif-icon header__icon linearicons-alarm"
-                ></span>
+            <div class="header__box">
+              <a
+                href="#"
+                class="header__link-icon header__notif-icon linearicons-alarm"
+              >
+                <span>25</span>
               </a>
-              <a href="#" class="header__link-icon"
-                ><span
-                  class="header__message-icon header__icon linearicons-envelope"
-                ></span
-              ></a>
-              <a href="#" class="header__link-icon"
-                ><span
-                  class="header__basket-icon header__icon linearicons-cart"
-                ></span
-              ></a>
+
+              <div class="header__message message">
+                <a
+                  href="#"
+                  class="header__link-icon header__message-icon linearicons-envelope"
+                  ><span>6</span></a
+                >
+                <div class="message__menu drop-down-menu">
+                  <div class="message__header">
+                    <div class="message__title">My Messages</div>
+                    <div class="message__btm-view-all">View All</div>
+                  </div>
+                  <div class="message__item message__item--new">
+                    <img class="message__img" />
+                    <div class="message__info">
+                      <div class="message__info-name">
+                        Washim <span class="linearicons-envelope"></span>
+                      </div>
+                      <div class="message__info-text">
+                        Hello John Smith! Nunc placerat id...
+                      </div>
+                      <div class="message__info-date">Just now</div>
+                    </div>
+                  </div>
+                  <div class="message__item message__item--new">
+                    <img class="message__img" />
+                    <div class="message__info">
+                      <div class="message__info-name">
+                        Bulbul Ahmed<span class="linearicons-envelope"></span>
+                      </div>
+                      <div class="message__info-text">
+                        Hello John Smith! Nunc placerat id...
+                      </div>
+                      <div class="message__info-date">2 hours ago</div>
+                    </div>
+                  </div>
+                  <div class="message__item">
+                    <img class="message__img" />
+                    <div class="message__info">
+                      <div class="message__info-name">
+                        Themeluva<span
+                          style="content: url(img/icons/reply.svg)"
+                        ></span>
+                      </div>
+                      <div class="message__info-text">
+                        Hello John Smith! Nunc placerat id...
+                      </div>
+                      <div class="message__info-date">Jul 16</div>
+                    </div>
+                  </div>
+                  <div class="message__item">
+                    <img class="message__img" />
+                    <div class="message__info">
+                      <div class="message__info-name">Bulbul Ahmed</div>
+                      <div class="message__info-text">
+                        Hello John Smith! Nunc placerat id...
+                      </div>
+                      <div class="message__info-date">May 23</div>
+                    </div>
+                  </div>
+                  <div class="message__item">
+                    <img class="message__img" />
+                    <div class="message__info">
+                      <div class="message__info-name">Adnan</div>
+                      <div class="message__info-text">
+                        Hello John Smith! Nunc placerat id...
+                      </div>
+                      <div class="message__info-date">Jul 16</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="header__basket basket">
+                <a
+                  href="#"
+                  class="header__link-icon header__basket-icon linearicons-cart"
+                  ><span>2</span></a
+                >
+                <div class="basket__menu drop-down-menu">
+                  <div>
+                    <div class="basket__item">
+                      <img class="basket__item-img" />
+
+                      <div class="basket__item-name">
+                        <div class="basket__item-title">
+                          Finance and Consulting Business Theme
+                        </div>
+                        <div class="basket__item-category">
+                          <span
+                            style="content: url(../img/icons/wordpress.svg)"
+                          ></span
+                          >Wordpress
+                        </div>
+                      </div>
+
+                      <div class="basket__item-circles">
+                        <a class="basket__item-link-delete"
+                          ><span class="linearicons-trash2"></span
+                        ></a>
+
+                        <div class="basket__item-price">$20</div>
+                      </div>
+                    </div>
+                    <div class="basket__item">
+                      <img class="basket__item-img" />
+
+                      <div class="basket__item-name">
+                        <div class="basket__item-title">
+                          Finance and Consulting Business Theme
+                        </div>
+                        <div class="basket__item-category">
+                          <span
+                            style="content: url(../img/icons/wordpress.svg)"
+                          ></span
+                          >Wordpress
+                        </div>
+                      </div>
+
+                      <div class="basket__item-circles">
+                        <a class="basket__item-link-delete"
+                          ><span class="linearicons-trash2"></span
+                        ></a>
+
+                        <div class="basket__item-price">$20</div>
+                      </div>
+                    </div>
+                    <div class="basket__total">
+                      <div class="basket__total-title">Total :</div>
+                      <div class="basket__total-price">$80</div>
+                    </div>
+
+                    <div class="basket__buttons">
+                      <a href="#" class="basket__btn">Go to Cart</a
+                      ><a href="#" class="basket__btn basket__btn--checkout"
+                        >Go to Checkout</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="header__account account">
@@ -51,6 +183,67 @@
               <div class="account__info">
                 <div class="account__name">Taofiq Hakim</div>
                 <div class="account__balance">$20.45</div>
+              </div>
+
+              <div class="account__menu drop-down-menu">
+                <div class="drop-down-menu__triangle"></div>
+
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><span class="linearicons-user"></span>Profile Page</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span class="linearicons-home"></span>Dashboard</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span class="linearicons-cog"></span>Account Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span class="linearicons-cart"></span>Your Purchases</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span class="linearicons-heart"></span>Your Favorites</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span class="linearicons-dice"></span>Add Credits</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span class="linearicons-chart-bars"></span>Sales
+                      Statements</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span class="linearicons-upload"></span>Upload Item</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span class="linearicons-book2"></span>Edit Item</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span class="linearicons-briefcase"></span>Withdrawals</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"><span class="linearicons-exit"></span>Logout</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

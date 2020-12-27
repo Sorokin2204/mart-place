@@ -3,14 +3,17 @@
 
 .header {
   &__top {
+    z-index: 0;
     background-color: #eef1f3;
   }
 
   &__top-inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 0px;
+    height: 100px;
   }
 
   &__logo {
@@ -24,26 +27,88 @@
     margin-left: auto;
   }
 
-  &__icons {
+  &__box {
     margin: 0 50px;
   }
 
-  &__icons &__link-icon &__icon {
+  &__link-icon {
+    position: relative;
     color: #7e8fa1;
     font-size: 20px;
-    margin-right: 30px;
+    // & + .header__link-icon {
+    //   margin-left: 30px;
+    // }
+
+    span {
+      position: absolute;
+      line-height: 22px;
+      display: block;
+      width: 22px;
+      height: 22px;
+      border-radius: 11px;
+      text-align: center;
+      right: -16px;
+      top: -16px;
+      color: #ffffff;
+      font-family: Quicksand, sans-serif;
+      font-size: 14px;
+    }
   }
 
   &__notif-icon {
+    span {
+      width: 26px;
+      background-color: #ff6a6c;
+    }
   }
 
-  &__message-icon {
+  &__message {
+    &-icon {
+      span {
+        background-color: #62d03b;
+      }
+    }
   }
 
-  &__basket-icon {
+  &__basket {
+    display: inline-block;
+    margin-left: 30px;
+
+    &-icon {
+      span {
+        background-color: #0674ec;
+      }
+    }
+
+    &:hover {
+      .basket__menu {
+        max-height: 550px;
+        border-top: 1px solid $blue;
+      }
+    }
   }
 
   &__account {
+    height: 100px;
+    cursor: pointer;
+    &:hover {
+      .account__menu {
+        max-height: 550px;
+        padding: 20px;
+        border-top: 1px solid $blue;
+      }
+    }
+  }
+
+  &__message {
+    display: inline-block;
+    margin-left: 30px;
+    &:hover {
+      .message__menu {
+        max-height: 550px;
+        border-top: 1px solid $blue;
+      }
+    }
   }
 
   &__bottom {
@@ -64,11 +129,36 @@
   }
 }
 
+.drop-down-menu {
+  box-shadow: 0 5px 40px rgba(82, 85, 90, 0.2);
+  border-radius: 0 0 3px 3px;
+  background-color: #ffffff;
+  position: absolute;
+  cursor: default;
+  z-index: 1;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s;
+
+  border-top: 0px solid $blue;
+  // &__triangle {
+  //   position: absolute;
+  //   top: 0px;
+  //   content: '';
+  //   width: 0;
+  //   height: 0;
+  //   border-left: 9px solid transparent;
+  //   border-right: 9px solid transparent;
+  //   border-bottom: 10px solid #0674ec;
+  // }
+}
+
 .account {
   display: flex;
   align-items: center;
+
   &__img {
-    background-color: #7c7979;
+    background-color: #a9a9a9;
     width: 50px;
     height: 50px;
     border-radius: 50px;
@@ -86,7 +176,233 @@
   }
 
   &__balance {
+    font-weight: 500;
     color: $blue;
+  }
+
+  &__menu {
+    width: 270px;
+    right: 0px;
+    padding: 0px 20px 0px 20px;
+    top: 100px;
+
+    li {
+      display: block;
+    }
+
+    a {
+      display: block;
+      padding: 15px 10px;
+      color: #54667a;
+      font-weight: 500;
+
+      &:hover {
+        background-color: $blue;
+        color: #fff;
+
+        span {
+          color: #fff;
+        }
+      }
+
+      span {
+        color: #54667a;
+        margin-right: 14px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.basket {
+  &__menu {
+    right: 200px;
+    top: 100px;
+    width: 400px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    padding: 25px;
+    border-bottom: 1px solid #e8ebf0;
+
+    &-img {
+      width: 80px;
+      height: 70px;
+      background-color: #828282;
+      margin-right: 15px;
+    }
+
+    &-name {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 178px;
+      margin-right: auto;
+    }
+
+    &-circles {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-title {
+      color: #000000;
+
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    &-link-delete {
+      position: relative;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: block;
+      background-color: rgba(115, 70, 192, 0.1);
+      span {
+        display: block;
+        top: 8px;
+        left: 8px;
+        position: absolute;
+        color: #818c98;
+        font-size: 16px;
+      }
+    }
+
+    &-category {
+      display: flex;
+      color: $purple;
+      span {
+        margin-right: 5px;
+      }
+    }
+
+    &-price {
+      display: inline-block;
+      color: $blue;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 15px;
+      padding: 7px 12px;
+      background-color: rgba(6, 116, 236, 0.1);
+    }
+  }
+
+  &__total {
+    padding: 25px 25px 30px 25px;
+    display: flex;
+    justify-content: flex-end;
+    color: #000000;
+
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__total-title {
+    margin-right: 30px;
+  }
+
+  &__total-price {
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__btn {
+    background-color: $purple;
+    color: #fefefe;
+    width: 200px;
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  &__btn--checkout {
+    background-color: $blue;
+  }
+}
+
+.message {
+  &__menu {
+    right: 240px;
+    top: 100px;
+    width: 370px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+  }
+
+  &__title {
+    font-weight: 500;
+    color: #000000;
+
+    font-size: 18px;
+  }
+
+  &__btm-view-all {
+    color: $blue;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 25px;
+
+    border: 1px solid #e8ebf0;
+
+    &--new {
+      .message__info-name span {
+        color: $blue;
+      }
+
+      .message__info-date {
+        color: $blue;
+      }
+    }
+  }
+
+  &__img {
+    margin-right: 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #3a2c29;
+  }
+
+  &__info {
+    height: 45px;
+    width: 265px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &-name {
+      color: #333333;
+      font-weight: 600;
+      font-size: 16px;
+      span {
+        margin-left: 14px;
+      }
+    }
+
+    &-text {
+    }
+
+    &-date {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      white-space: nowrap;
+    }
   }
 }
 
