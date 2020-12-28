@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0px;
+
     height: 100px;
   }
 
@@ -28,7 +28,16 @@
   }
 
   &__box {
+    display: flex;
+
     margin: 0 50px;
+  }
+
+  &__box-item {
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 40px;
+    margin-top: 25px;
   }
 
   &__link-icon {
@@ -55,28 +64,12 @@
     }
   }
 
-  &__notif-icon {
-    span {
-      width: 26px;
-      background-color: #ff6a6c;
-    }
-  }
-
-  &__message {
-    &-icon {
-      span {
-        background-color: #62d03b;
-      }
-    }
-  }
-
   &__basket {
-    display: inline-block;
     margin-left: 30px;
 
     &-icon {
       span {
-        background-color: #0674ec;
+        background-color: $blue;
       }
     }
 
@@ -88,8 +81,41 @@
     }
   }
 
+  &__message {
+    margin-left: 30px;
+    &-icon {
+      span {
+        background-color: #62d03b;
+      }
+    }
+
+    &:hover {
+      .message__menu {
+        max-height: 550px;
+        border-top: 1px solid $blue;
+      }
+    }
+  }
+
+  &__notification {
+    &-icon {
+      span {
+        width: 26px;
+        background-color: $tomato;
+      }
+    }
+
+    &:hover {
+      .notification__menu {
+        max-height: 500px;
+        border-top: 1px solid $blue;
+      }
+    }
+  }
+
   &__account {
-    height: 100px;
+    margin-top: 25px;
+    padding-bottom: 25px;
     cursor: pointer;
     &:hover {
       .account__menu {
@@ -99,18 +125,6 @@
       }
     }
   }
-
-  &__message {
-    display: inline-block;
-    margin-left: 30px;
-    &:hover {
-      .message__menu {
-        max-height: 550px;
-        border-top: 1px solid $blue;
-      }
-    }
-  }
-
   &__bottom {
   }
 
@@ -402,6 +416,136 @@
       top: 0px;
       right: 0px;
       white-space: nowrap;
+    }
+  }
+}
+
+.notification {
+  &__menu {
+    width: 370px;
+
+    right: 0px;
+    top: 100px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+  }
+
+  &__title {
+    font-weight: 500;
+    color: #000000;
+
+    font-size: 18px;
+  }
+
+  &__btm-view-all {
+    color: $blue;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px 25px;
+
+    border-top: 1px solid #e8ebf0;
+  }
+
+  &__img {
+    margin-right: 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #3a2c29;
+  }
+
+  &__text {
+    line-height: 30px;
+
+    &::first-line {
+      line-height: 100% !important;
+    }
+  }
+
+  &__info {
+    position: relative;
+    height: 60px;
+    width: 215px;
+    margin-right: auto;
+
+    &-name {
+      display: inline;
+      color: #333333;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    &-event {
+      color: #747a86;
+      display: inline;
+    }
+
+    &-sender {
+      display: inline-block;
+      color: $blue;
+    }
+
+    &-date {
+      display: block;
+      color: #747a86;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+
+  &__circle {
+    align-self: center;
+    position: relative;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: block;
+
+    span {
+      display: block;
+      top: 9px;
+      left: 9px;
+      position: absolute;
+
+      font-size: 15px;
+    }
+  }
+
+  &__icon-heart {
+    background-color: rgba($blue, 0.1);
+    span {
+      color: $blue;
+    }
+  }
+
+  &__icon-bubble {
+    background-color: rgba($purple, 0.1);
+    span {
+      color: $purple;
+    }
+  }
+
+  &__icon-cart {
+    background-color: rgba($tomato, 0.1);
+    span {
+      color: $tomato;
+    }
+  }
+
+  &__icon-star {
+    background-color: rgba($lime, 0.1);
+    span {
+      color: $lime;
     }
   }
 }
@@ -894,7 +1038,7 @@
     border-radius: 15px;
     background-color: #e6f1fd;
 
-    color: #0674ec;
+    color: $blue;
     font-weight: 600;
   }
 
