@@ -26,7 +26,13 @@
               <img src="img/logo-dark.png" alt="logo" />
             </div>
 
-            <a href="#" class="button header__button">Become a Seller</a>
+            <a
+              data-fancybox
+              data-src="#modal"
+              href="javascript:;"
+              class="button header__button"
+              >Become a Seller</a
+            >
 
             <div class="header__box">
               <div class="header__box-item header__notification notification">
@@ -1522,6 +1528,49 @@
         </p>
       </div>
     </section>
+
+    <div id="modal">
+      <div class="login">
+        <div class="login__title">Welcome Back</div>
+        <div class="login__subtitle">You can sign in with your username</div>
+
+        <form action="post">
+          <label
+            >Username<input
+              type="text"
+              required
+              placeholder="Enter your username..."
+          /></label>
+
+          <label
+            >Password<input
+              type="password"
+              required
+              placeholder="Enter your password..."
+            />
+          </label>
+          <label class="check-box">
+            <input type="checkbox" class="check-box__input" /><span
+              class="check-box__style"
+            ></span
+            >Remember me</label
+          >
+
+          <button type="submit" class="login__btn button">Login Now</button>
+        </form>
+        <div class="login__buttom">
+          <div class="login__lost">
+            Lost your <a href="#" class="login__lost-username">username </a>
+            or
+            <a href="#" class="login__lost-password">password?</a>
+          </div>
+          <div class="login__register">
+            Don't have an
+            <a href="#" class="login__register-account">account?</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>

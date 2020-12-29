@@ -17,9 +17,11 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/mixitup/dist/mixitup.js',
+
     'app/js/slick.min.js',
     'app/js/main.js',
     'app/js/jquery.rateyo.js',
+    'app/js/jquery.fancybox.js',
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -30,6 +32,7 @@ function scripts() {
 function styles() {
   return src([
     'node_modules/normalize.css/normalize.css',
+
     'app/css/**/*.css',
     '!app/css/style.min.css',
     'app/scss/**/*.scss',
