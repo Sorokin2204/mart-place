@@ -68,6 +68,10 @@ body {
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #ffffff;
   }
+
+  &--purple {
+    background-color: $purple;
+  }
 }
 
 .section-header {
@@ -183,6 +187,45 @@ body {
       position: absolute;
       top: 0px;
       right: 0px;
+    }
+  }
+}
+
+.social {
+  &-list {
+    display: flex;
+
+    li + li {
+      margin-left: 13px;
+    }
+    a {
+      width: 42px;
+      height: 42px;
+      background-image: url(../img/css_sprites.png);
+    }
+
+    &-facebook {
+      background-position: -0 0;
+    }
+
+    &-twitter {
+      background-position: -42px 0;
+    }
+
+    &-google {
+      background-position: -84px 0;
+    }
+
+    &-pinterest {
+      background-position: -126px 0;
+    }
+
+    &-linkedin {
+      background-position: -168px 0;
+    }
+
+    &-basketball {
+      background-position: -210px 0;
     }
   }
 }
