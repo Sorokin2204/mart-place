@@ -142,45 +142,71 @@
   }
 }
 
-#modal {
-  padding: 60px 50px;
+#modal-login,
+#modal-register,
+#modal-recover-password {
+  padding: 0;
   width: 555px;
   box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
   border-radius: 4px;
   background-color: #ffffff;
-  .login {
+  .modal-form {
     &__title {
       text-align: center;
       color: #000000;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       font-size: 26px;
       font-weight: 500;
     }
 
+    &__head {
+      padding: 60px 50px 25px 50px;
+    }
+
+    &__content {
+      padding: 30px 50px 60px;
+      border-top: 1px solid #e8ebf0;
+    }
+
     &__check-box {
-      margin: 30px 0;
+      margin-top: 30px;
     }
 
     &__subtitle {
+      line-height: 28px;
       text-align: center;
-      margin-bottom: 30px;
       font-size: 16px;
     }
 
+    &__recover-password {
+      &-subtitle {
+        width: 458px;
+        text-align: left;
+      }
+
+      &-content {
+        padding-top: 40px;
+      }
+    }
+
     form {
-      border-top: 1px solid #e8ebf0;
     }
 
     label:not([class]) {
       display: block;
-      margin-top: 30px;
+
       color: #000000;
       font-weight: 500;
       font-size: 16px;
+
+      &:not(:first-child) {
+        margin-top: 30px;
+      }
     }
 
     input[type='text'],
-    input[type='password'] {
+    input[type='password'],
+    input[type='email'] {
       margin-top: 15px;
       height: 50px;
       border: none;
@@ -195,35 +221,24 @@
     }
 
     &__buttom {
+      margin-top: 40px;
       display: flex;
       justify-content: space-between;
     }
 
-    &__lost {
+    &__text {
       font-size: 16px;
-    }
 
-    &__lost-username {
-      color: $blue;
-    }
-
-    &__lost-password {
-      color: $blue;
-    }
-
-    &__register {
-      font-size: 16px;
-    }
-
-    &__register-account {
-      color: $blue;
+      a {
+        color: $blue;
+      }
     }
 
     &__btn {
+      margin-top: 35px;
       width: 190px;
       height: 50px;
       border-radius: 25px;
-      margin-bottom: 40px;
     }
   }
 }
@@ -2251,13 +2266,6 @@
   }
 
   &__title {
-    text-align: center;
-    color: #000000;
-    font-size: 36px;
-    margin-bottom: 25px;
-    span {
-      color: $blue;
-    }
   }
 
   &__subtitle {
@@ -2360,5 +2368,156 @@
     font-size: 24px;
     padding-bottom: 30px;
     border-bottom: 1px solid #e8ebf0;
+  }
+}
+
+.pricing-plan {
+  background-color: #eff1f5;
+  &__inner {
+    padding: 120px 0;
+  }
+
+  &__title {
+  }
+
+  &__subtitle {
+    margin-bottom: 60px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    border-top: 3px solid;
+    border-radius: 3px 3px 4px 4px;
+    padding: 30px;
+    width: 360px;
+    height: 592px;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+
+    background-color: #ffffff;
+  }
+
+  &__item-title {
+    padding-bottom: 30px;
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 500;
+    border-bottom: 1px solid #e8ebf0;
+    margin-bottom: 30px;
+  }
+
+  &__item-price {
+    margin-bottom: 50px;
+    text-align: center;
+    color: #000000;
+    font-size: 36px;
+    &::before {
+      display: inline-block;
+      content: '$';
+      font-size: 16px;
+      font-weight: 500;
+      vertical-align: top;
+      margin-top: 4px;
+    }
+
+    &::after {
+      display: inline-block;
+      content: '/month';
+      color: #555555;
+      font-size: 16px;
+      vertical-align: bottom;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__item-list {
+    margin-bottom: 40px;
+  }
+
+  &__list-item {
+    display: inline-block;
+    font-size: 16px;
+    padding-left: 22px;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      content: '';
+      display: block;
+      width: 7px;
+      height: 7px;
+      background-color: #c5cad4;
+      border-radius: 50%;
+    }
+
+    span:not([class]) {
+      color: #000000;
+      font-weight: 500;
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    &-help {
+      display: block;
+      bottom: 0;
+      right: -24px;
+      color: #555555;
+      position: absolute;
+      font-size: 18px;
+
+      &:hover {
+        .pricing-plan__list-item-tooltip {
+          visibility: visible;
+        }
+      }
+    }
+
+    &-tooltip {
+      font-family: 'Quicksand';
+      visibility: hidden;
+      width: 300px;
+      background-color: #000000;
+      color: #f5f5f5;
+      font-size: 16px;
+      text-align: justify;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 16px 45px 26px 45px;
+      position: absolute;
+      z-index: 1;
+      bottom: 150%;
+      left: 50%;
+      margin-left: -150px;
+      line-height: 30px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #000 transparent transparent transparent;
+      }
+    }
+  }
+
+  &__item-btn {
+    height: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

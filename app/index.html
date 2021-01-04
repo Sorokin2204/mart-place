@@ -28,7 +28,7 @@
 
             <a
               data-fancybox
-              data-src="#modal"
+              data-src="#modal-login"
               href="javascript:;"
               class="button header__button"
               >Become a Seller</a
@@ -1531,45 +1531,157 @@
       </div>
     </section>
 
-    <div id="modal">
-      <div class="login">
-        <div class="login__title">Welcome Back</div>
-        <div class="login__subtitle">You can sign in with your username</div>
+    <div id="modal-login">
+      <div class="modal-form">
+        <div class="modal-form__head">
+          <div class="modal-form__title">Welcome Back</div>
+          <div class="modal-form__subtitle">
+            You can sign in with your username
+          </div>
+        </div>
 
-        <form action="post">
-          <label
-            >Username<input
-              type="text"
-              required
-              placeholder="Enter your username..."
-          /></label>
+        <div class="modal-form__content">
+          <form action="post">
+            <label
+              >Username<input
+                type="text"
+                required
+                placeholder="Enter your username..."
+            /></label>
 
-          <label
-            >Password<input
-              type="password"
-              required
-              placeholder="Enter your password..."
-            />
-          </label>
-          <label class="login__check-box check-box">
-            <input type="checkbox" class="check-box__input" /><span
-              class="check-box__style"
-            ></span
-            >Remember me</label
+            <label
+              >Password<input
+                type="password"
+                required
+                placeholder="Enter your password..."
+              />
+            </label>
+            <label class="modal-form__check-box check-box">
+              <input type="checkbox" class="check-box__input" /><span
+                class="check-box__style"
+              ></span
+              >Remember me</label
+            >
+
+            <button type="submit" class="modal-form__btn button">
+              Login Now
+            </button>
+          </form>
+          <div class="modal-form__buttom">
+            <div class="modal-form__text">
+              Lost your
+              <a href="#">username </a>
+              or
+              <a
+                data-fancybox
+                data-src="#modal-recover-password"
+                href="javascript:;"
+                href="#"
+                >password?</a
+              >
+            </div>
+            <div class="modal-form__text">
+              Don't have an
+              <a
+                data-fancybox
+                data-src="#modal-register"
+                href="javascript:;"
+                class="modal-form__register-account"
+                >account?</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-register">
+      <div class="modal-form">
+        <div class="modal-form__head">
+          <div class="modal-form__title">Create Your Account</div>
+          <div class="modal-form__subtitle">
+            Please fill the following fields with appropriate information to
+            register a new MartPlace account.
+          </div>
+        </div>
+
+        <div class="modal-form__content">
+          <form action="post">
+            <label
+              >Your Name<input
+                type="text"
+                required
+                placeholder="Enter your name..."
+            /></label>
+            <label
+              >Email Address<input
+                type="email"
+                required
+                placeholder="Enter your email address"
+            /></label>
+
+            <label
+              >Username<input
+                type="text"
+                required
+                placeholder="Enter your username..."
+            /></label>
+
+            <label
+              >Password<input
+                type="password"
+                required
+                placeholder="Enter your password..."
+              />
+            </label>
+
+            <label
+              >Confirm Password<input
+                type="password"
+                required
+                placeholder="Enter your password..."
+              />
+            </label>
+
+            <button type="submit" class="modal-form__btn button">
+              Register Now
+            </button>
+          </form>
+          <div class="modal-form__buttom">
+            <div class="modal-form__text">
+              Already have an account?
+              <a href="#"> Login </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-recover-password">
+      <div class="modal-form">
+        <div class="modal-form__head modal-form__recover-password-head">
+          <div
+            class="modal-form__subtitle modal-form__recover-password-subtitle"
           >
+            Please enter the email address for your account. A verification code
+            will be sent to you. Once you have received the verification code,
+            you will be able to choose a new password for your account.
+          </div>
+        </div>
 
-          <button type="submit" class="login__btn button">Login Now</button>
-        </form>
-        <div class="login__buttom">
-          <div class="login__lost">
-            Lost your <a href="#" class="login__lost-username">username </a>
-            or
-            <a href="#" class="login__lost-password">password?</a>
-          </div>
-          <div class="login__register">
-            Don't have an
-            <a href="#" class="login__register-account">account?</a>
-          </div>
+        <div class="modal-form__content modal-form__recover-password-content">
+          <form action="post">
+            <label
+              >Email Address<input
+                type="email"
+                required
+                placeholder="Enter your email address..."
+            /></label>
+
+            <button type="submit" class="modal-form__btn button">
+              Submit Now
+            </button>
+          </form>
         </div>
       </div>
     </div>
